@@ -10,13 +10,12 @@ ip_region_counts = {}
 nickname_counts = {}
 level_counts = {}
 content_counts = {}
-passageid = 55221094
 
 # 定义停用词列表
 stopwords = ["我", "了", "的", "你", "不", "啊", "吧", "呀","有","吗","_","-","米游姬","开拓者","拉尼","阿姬","米游兔","流萤","萨姆","心情简单","三月七" ,"也", "都","bbs","mihoyo","就","是","img","src","https","upload","miyoshe"]
 
 while True:
-    returnt = requests.get(url=f"https://bbs-api.miyoushe.com/post/wapi/getPostReplies?gids=5&is_hot=true&last_id={lastid}&post_id={passageid}&size=50")
+    returnt = requests.get(url=f"https://bbs-api.miyoushe.com/post/wapi/getPostReplies?gids=5&is_hot=true&last_id={lastid}&post_id=55816748&size=50")
     returnt_data = json.loads(returnt.text).get("data").get("list")
     
     print(lastid)
